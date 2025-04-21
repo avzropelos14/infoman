@@ -1,0 +1,80 @@
+*{
+    font-family: monospace;
+}
+
+.left{
+    display: grid;
+    gap: 20px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.admin{
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px 15px;
+    background: lightblue;
+    gap: 10px;
+}
+
+.admin *{
+    margin: 0;
+    text-align: center;
+}
+
+.bottom{
+    display: grid;
+    gap: 10px;
+}
+
+.nav{
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+a{
+    color: black;
+}
+
+td div a{
+    background: lightsteelblue;
+    font-size: 15px;
+    border-radius: 15px;
+    color: white;
+    padding: 5px 15px;
+    text-decoration: none;
+}
+
+td div{
+    display: grid;
+    gap: 5px;
+}
+
+.right h2, td{
+    text-align: center;
+    padding: 5px;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+th{
+    padding: 5px 15px 15px;
+    font-size: 10px;
+}
+
+img{
+    width: 100px;
+    border-radius: 30px;
+    border: 1px solid black;
+}
