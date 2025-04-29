@@ -17,6 +17,7 @@ $result = $con->query("SELECT * FROM hospital");
         <th>Name</th>
         <th>Registration Date</th>
         <th>Doctor in Charge</th>
+        <th>Room Number</th>
         <th>Actions</th>
     </tr>
 
@@ -26,6 +27,7 @@ $result = $con->query("SELECT * FROM hospital");
             <td><a href="profile.php?id=<?= $row['id'] ?>"><?= $row['name'] ?></a></td>
             <td><?= $row['registration_date'] ?></td>
             <td><?= $row['doctor_in_charge'] ?></td>
+            <td><?= $row['room_number'] ?></td>
             
             <td>
                 <a href="update.php?id=<?= $row['id'] ?>">Edit</a> |
