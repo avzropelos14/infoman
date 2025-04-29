@@ -15,11 +15,6 @@ $result = $con->query("SELECT * FROM hospital");
     <tr>
         <th>ID</th>
         <th>Name</th>
-        <th>Date of Birth</th>
-        <th>Gender</th>
-        <th>Contact</th>
-        <th>Medical Record</th>
-        <th>Blood Type</th>
         <th>Registration Date</th>
         <th>Doctor in Charge</th>
         <th>Actions</th>
@@ -29,11 +24,6 @@ $result = $con->query("SELECT * FROM hospital");
         <tr>
             <td><?= $row['id'] ?></td>
             <td><a href="profile.php?id=<?= $row['id'] ?>"><?= $row['name'] ?></a></td>
-            <td><?= $row['date_of_birth'] ?></td>
-            <td><?= $row['gender'] ?></td>
-            <td><?= $row['contact'] ?></td>
-            <td><?= $row['medical_record'] ?></td>
-            <td><?= $row['blood_type'] ?></td>
             <td><?= $row['registration_date'] ?></td>
             <td><?= $row['doctor_in_charge'] ?></td>
             
