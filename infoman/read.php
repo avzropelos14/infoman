@@ -28,6 +28,7 @@ $result = $con->query("SELECT * FROM hospital");
             <td><?= $row['registration_date'] ?></td>
             <td><?= $row['doctor_in_charge'] ?></td>
             <td><?= $row['room_number'] ?></td>
+            <td><?= $row['allergies'] ?></td>
             
             <td>
                 <a href="update.php?id=<?= $row['id'] ?>">Edit</a> |
