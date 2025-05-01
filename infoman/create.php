@@ -9,8 +9,10 @@
         $blood_type = $_POST['blood_type'];
         $registration_date = $_POST['registration_date'];
         $doctor_in_charge = $_POST['doctor_in_charge'];
+        $room_number = $_POST['room_number'];
+        $allergies = $_POST['allergies'];
 
-        $con->query("INSERT INTO hospital (name, date_of_birth, gender, contact, blood_type, registration_date, doctor_in_charge, medical_record) VALUES ('$name', '$date_of_birth', '$gender', '$contact', '$blood_type', '$registration_date', '$doctor_in_charge', '$medical_record')");
+        $con->query("INSERT INTO hospital (name, date_of_birth, gender, contact, blood_type, registration_date, doctor_in_charge, medical_record, room_number, allergies) VALUES ('$name', '$date_of_birth', '$gender', '$contact', '$blood_type', '$registration_date', '$doctor_in_charge', '$medical_record', '$room_number', '$allergies')");
         header('Location: read.php');
     }
 ?>
@@ -35,7 +37,9 @@
         <input type="text" name="disease_record" placeholder="Medical Record" required>
         <input type="text" name="blood_type" placeholder="Blood Type" required>
         <input type="date" name="registration_date" required>
-        <input type="text" name="doctor_in_charge" placeholder="Doctor in Charge"> 
+        <input type="text" name="doctor_in_charge" placeholder="Doctor in Charge">
+        <input type="text" name="room_number" placeholder="Room Number">
+        <input type="text" name="allergies" placeholder="Allergies">
         <button type="submit" name="submit">Add Patient</button>
     </form>
 </body>
