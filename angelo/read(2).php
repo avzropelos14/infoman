@@ -1,41 +1,61 @@
 <?php
-include "config.php";
-$result = $con->query("SELECT * FROM hospital");
+    include "config.php";
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $name = $_POST['name'];
+        $date_of_birth = $_POST['date_of_birth'];
+        $gender = $_POST['gender'];
+        $contact = $_POST['contact'];
+        $medical_record = $_POST['medical_record'];
+        $blood_type = $_POST['blood_type'];
+        $registration_date = $_POST['registration_date'];
+        $doctor_in_charge = $_POST['doctor_in_charge'];
+
+        $con->query("INSERT INTO hospital (name, date_of_birth, gender, contact, blood_type, registration_date, doctor_in_charge, medical_record) VALUES ('$name', '$date_of_birth', '$gender', '$contact', '$blood_type', '$registration_date', '$doctor_in_charge', '$medical_record')");
+        header('Location: read.php');
+    }
 ?>
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Patient Records</title>
- 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Patient</title>
+    
 </head>
 <body>
-<h2>Hospital Patient Management System</h2>
-<a href="create.php">Add New Patient</a>
+    <form action="" method="POST">
 
-<table border="1" cellpadding="10" cellspacing="0">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Date of Birth</th>
-            <th>Gender</th>
-            <th>Room Number</th>
-            <th>Actions</th>
-        </tr>
+        <h2>Add a Patient</h2>
+        <p>Name: </p>
+        <input type="text" name="name" placeholder="Name" required><br>
 
-    <?php while ($row = $result->fetch_assoc()): ?>
-        <tr>
-            <td><?= $row['id'] ?></td>
-            <td><a href="profile.php?id=<?= $row['id'] ?>"><?= $row['name'] ?></a></td>
-            <td><?= $row['registration_date'] ?></td>
-            <td><?= $row['doctor_in_charge'] ?></td>
-            <td><?= $row['room_number'] ?></td>
-            
-            <td>
-                <a href="update.php?id=<?= $row['id'] ?>">Edit</a> |
-                <a href="delete.php?id=<?= $row['id'] ?>" onclick='return confirm("Are you sure?")'>Delete</a>
-            </td>
-        </tr>
-    <?php endwhile; ?>
-</table>
+        <p>Date of birth: </p>
+        <input type="date" name="date_of_birth" placeholder="Date of Birth" required><br>
+
+        <p>Gender: </p>
+        <select name="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select><br>
+
+        <p>Contact Number: </p>
+        <input type="number" name="contact" placeholder="Contact Number" required><br>
+
+        <p>Medical Record: </p>
+        <input type="text" name="disease_record" placeholder="Medical Record" required><br>
+
+        <p>Blood Type: </p>
+        <input type="text" name="blood_type" placeholder="Blood Type" required><br>
+
+        <p>Registration Date: </p>
+        <input type="date" name="registration_date" required><br>
+
+        <p>Doctor in Charge: </p>
+        <input type="text" name="doctor_in_charge" placeholder="Doctor in Charge"><br> 
+
+
+        <button type="submit" name="submit">Add Patient</button>
+    </form>
 </body>
 </html>
