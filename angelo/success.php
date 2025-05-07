@@ -6,8 +6,9 @@
     <title>Welcome</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        body{
-            background: linear-gradient(315deg, #00c6ff, blue) !important;
+        body {
+            /* linear-gradient(315deg, #76e0ff, #5252ff) !important */
+            background: linear-gradient(315deg, #76e0ff, #5252ff) !important;
             background-attachment: fixed;
             height: 100vh;
             display: flex;
