@@ -1,9 +1,9 @@
 <?php
 
-    $con = mysqli_connect('localhost', 'root', '', 'infoman');
+    $con = mysqli_connect('localhost', 'root', '', 'infoman' , 3305);
 
-    if($con->connect_error){
-        $die('Connection Failed!');
+    if(!$con){
+        die('Connection Failed!'.mysqli_connect_error());
     }else{
         echo '';
     }

@@ -100,6 +100,7 @@ if (isset($_POST['submit'])) {
 
         textarea {
             resize: vertical;
+            text-align: left;
         }
 
         button {
@@ -176,14 +177,16 @@ if (isset($_POST['submit'])) {
         <input type="text" name="contact" id="contact" maxlength="11" required>
 
         <label for="medical_record">Medical Record</label>
-        <textarea name="medical_record" id="medical_record" rows="7" required placeholder="1. Disease:
+        <textarea name="medical_record" id="medical_record" rows="7" required placeholder="">
+1. Disease:
 2. Symptoms:
 3. Treatment:
 4. Allergies:
 5. Medication:
 6. Previous Medical History:
 7. Follow-up:
-8. Notes:"></textarea>
+8. Notes:
+        </textarea>
 
         <label for="blood_type">Blood Type</label>
         <select name="blood_type" id="blood_type" required>
