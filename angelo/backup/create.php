@@ -28,7 +28,7 @@
         <input type="text" name="name" placeholder="Name" required>
         <input type="date" name="date_of_birth" placeholder="Date of Birth" required>
         <select name="gender">
-            <option value="Male">Male</option>
+            <option value="Male" checked>Male</option>
             <option value="Female">Female</option>
         </select>
         <input type="number" name="contact" placeholder="Contact Number" required>
