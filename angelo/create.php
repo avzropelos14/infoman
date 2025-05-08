@@ -94,7 +94,7 @@
             <input type="text" name="contact" placeholder="Contact Number" maxlength="11" required><br>
 
             <p>Medical Record: </p>
-            <textarea name="disease_record" rows="10" required>
+            <textarea name="medical_record" rows="10" required>
 1. Disease:
 2. Symptoms:
 3. Treatment:
